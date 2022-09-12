@@ -33,6 +33,5 @@ module.exports = {
 
     posts: createPostsTable(sequelize, DataTypes),
 
-    cars: createCarsTable(sequelize, DataTypes) 
 
 }
