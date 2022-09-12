@@ -2,7 +2,6 @@
 
 const { Sequelize, DataTypes } = require('sequelize');
 const { createPostsTable } = require('./post.model');
-const { createCarsTable } = require('./cars.model');
 
 require('dotenv').config();
 
