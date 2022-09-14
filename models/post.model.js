@@ -10,5 +10,4 @@ const createPostsTable = (dataBase, DataType) => dataBase.define('posts', {
 
 
 
-
 module.exports = { createPostsTable };
