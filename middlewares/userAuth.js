@@ -8,14 +8,13 @@ async function checkUser(req, res, next) {
         const username = await usersModel.findOne({ where: { userName: req.body.username } });
 
         if (username) {
-            next(`Username is already taken`);
-        } 
-        
+            return res.status(409).send('Username already taken')
+        }
 
         const email = await usersModel.findOne({ where: { email: req.body.email } });
 
         if (email) {
-            next(`Email is already taken`);
+            return res.status(409).send('Email already taken')
         }
 
         next();
