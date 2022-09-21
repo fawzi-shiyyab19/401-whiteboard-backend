@@ -25,7 +25,7 @@ let sequelize = new Sequelize(POSTGRES_URL, sequelizeOptions);
 
 sequelize.authenticate()
     .then(() => {
-        console.log('Database connected to postgres DBMS');
+        console.log('Database connected to postgres ');
     }).catch((err) => {
         console.log(err);
     });
