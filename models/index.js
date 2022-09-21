@@ -25,7 +25,7 @@ let sequelize = new Sequelize(POSTGRES_URL, sequelizeOptions);
 
 sequelize.authenticate()
     .then(() => {
-        console.log('Database connected to postgres ');
+        console.log('Database connected to postgres DBMS');
     }).catch((err) => {
         console.log(err);
     });
@@ -37,6 +37,7 @@ const commentModel = createCommentTable(sequelize, DataTypes);
 const comments = new CrudOperations(commentModel);
 
 const usersModel = createUsersTable(sequelize, DataTypes);
+
 
 postsModel.hasMany(commentModel, { foreignKey: 'textId', sourceKey: 'id' });
 commentModel.belongsTo(postsModel, { foreignKey: 'textId', targetKey: 'id' });
