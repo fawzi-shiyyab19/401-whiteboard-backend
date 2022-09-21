@@ -3,7 +3,7 @@
 
 function errHandler(err,req,res,next) {
 
-    res.status(500).send({
+    res.send({
         code : 500,
         Message : `${err}`
     })

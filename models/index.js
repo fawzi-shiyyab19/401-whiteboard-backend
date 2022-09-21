@@ -38,7 +38,6 @@ const comments = new CrudOperations(commentModel);
 
 const usersModel = createUsersTable(sequelize, DataTypes);
 
-
 postsModel.hasMany(commentModel, { foreignKey: 'textId', sourceKey: 'id' });
 commentModel.belongsTo(postsModel, { foreignKey: 'textId', targetKey: 'id' });
 
