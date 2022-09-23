@@ -1,7 +1,7 @@
 'use strict';
 
 
-const createPostsTable = (dataBase, DataType) => dataBase.define('posts', {
+const createPostsTable = (sequelize, DataType) => sequelize.define('posts', {
 
     title: { type: DataType.STRING, allowNull: false },
     content: { type: DataType.STRING, defaultValue: 'Good Data' },

@@ -1,8 +1,6 @@
 'use strict';
 
-function createCommentTable(dataBase, DataType) {
-
-    return dataBase.define('comment', {
+const createCommentTable=(sequelize, DataType)=> sequelize.define('comment', {
 
         text: { type: DataType.STRING, allowNull: false },
         textId: { type: DataType.INTEGER, allowNull: false },
@@ -10,7 +8,6 @@ function createCommentTable(dataBase, DataType) {
 
     });
 
-}
 
 
-module.exports = { createCommentTable };
+module.exports = {createCommentTable} ;
