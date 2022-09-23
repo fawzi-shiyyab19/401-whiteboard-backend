@@ -1,7 +1,7 @@
 "use strict";
 
 const express = require("express");
-const { posts, postsModel, commentModel } = require("../models");
+const { posts, postsModel, commentModel, comments } = require("../models");
 const { bearerAuth } = require("../middlewares/bearerAuth");
 const router = express.Router();
 

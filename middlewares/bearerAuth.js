@@ -10,7 +10,9 @@ async function bearerAuth(req, res, next) {
     const userToken = bearer.split(" ")[1];
     const parsedToken = jwt.verify(userToken, process.env.JWT);
     const user = await usersModel.findOne({where: { userName: parsedToken.username }});
+    // const user = parsedToken
     if (user) {
+      console.log("it is valid ")
       req.user = user;
       next();
     } else {
